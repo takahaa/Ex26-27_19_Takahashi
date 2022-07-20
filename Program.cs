@@ -5,24 +5,31 @@ namespace Ex26_19_Takahashi
     {
         static void Main(string[] args)
         {
-            Box box = new Box(
-                InputUtility.InputFloat("幅"),
-                InputUtility.InputFloat("高さ"),
-                InputUtility.InputFloat("奥行"));
+            try
+            {
+                Box box = new Box(
+                    InputUtility.InputFloat("幅"),
+                    InputUtility.InputFloat("高さ"),
+                    InputUtility.InputFloat("奥行"));
+                
+                /*
+                 * 別バージョン
+                var width = InputUtility.InputFloat("幅");
+                var height = InputUtility.InputFloat("高さ");
+                var depth = InputUtility.InputFloat("奥行");
+                Box box = new Box(width, height, depth);
+                */
 
-            Console.WriteLine($"Boxの表面積={box.GetSurface()}\nBoxの体積={box.GetVlueme()}");
+                Console.WriteLine($"Boxの表面積={box.GetSurface()}\nBoxの体積={box.GetVlueme()}");
 
-            /*
-             * 別バージョン
-            var width = InputUtility.InputFloat("幅");
-            var height = InputUtility.InputFloat("高さ");
-            var depth = InputUtility.InputFloat("奥行");
-            Box box = new Box (width, height, depth);
-            */
+            }
+            catch (Exception)
+            {
+
+            }
         }
-
-
     }
+
     class Box
     {
         float width;
