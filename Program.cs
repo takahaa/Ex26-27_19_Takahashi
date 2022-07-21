@@ -5,8 +5,6 @@ namespace Ex26_19_Takahashi
     {
         static void Main(string[] args)
         {
-            try
-            {
                 Box box = new Box(
                     InputUtility.InputFloat("幅"),
                     InputUtility.InputFloat("高さ"),
@@ -22,11 +20,6 @@ namespace Ex26_19_Takahashi
 
                 Console.WriteLine($"Boxの表面積={box.GetSurface()}\nBoxの体積={box.GetVlueme()}");
 
-            }
-            catch (Exception)
-            {
-
-            }
         }
     }
 
