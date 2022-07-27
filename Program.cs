@@ -1,5 +1,5 @@
 ﻿using InputUtilitys;
-namespace Ex26_19_Takahashi
+namespace Ex26_27_19_Takahashi
 {
     internal class Program
     {
