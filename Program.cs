@@ -5,10 +5,6 @@ namespace Ex26_27_19_Takahashi
     {
         static void Main(string[] args)
         {
-            Box box = new Box(
-                InputUtility.InputFloat("幅"),
-                InputUtility.InputFloat("高さ"),
-                InputUtility.InputFloat("奥行"));
 
             Cylinder cylinder = new Cylinder(
                 InputUtility.InputFloat("円の半径"),
@@ -22,7 +18,6 @@ namespace Ex26_27_19_Takahashi
                 InputUtility.InputFloat("三角形の高さ"),
                 InputUtility.InputFloat("高さ"));
 
-            Console.WriteLine($"直方体の表面積={box.GetSurface()}\n直方体の体積={box.GetVlueme()}");
             Console.WriteLine($"円柱の表面積={cylinder.GetSurface()}\n円柱の体積={cylinder.GetVlueme()}");
             Console.WriteLine($"球の表面積={sphere.GetSurface()}\n球の体積={sphere.GetVlueme()}");
             Console.WriteLine($"三角柱の表面積={triangularprism.GetSurface()}\n三角柱の体積={triangularprism.GetVlueme()}");
@@ -30,30 +25,6 @@ namespace Ex26_27_19_Takahashi
         }
     }
 
-    class Box
-    {
-        float width;
-        float height;
-        float depth;
-
-        public Box(float width, float height, float depth)
-        {
-            this.width = width;
-            this.height = height;
-            this.depth = depth;
-
-        }
-
-        public float GetSurface()
-        {
-            return (width * height + depth * height + width * depth) * 2;
-        }
-
-        public float GetVlueme()
-        {
-            return width * height * depth;
-        }
-    }
 
     class Cylinder
     {
