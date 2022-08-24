@@ -64,7 +64,7 @@ namespace Ex26_27_19_Takahashi
 
         public float GetVlueme()
         {
-            return 0.75f * (float)Math.PI * radius * radius * radius;
+            return 4.0f / 3.0f  * (float)Math.PI * radius * radius * radius;
         }
     }
 
